@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./assets/fonts/FuturaPT-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./assets/fonts/FuturaPT-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./assets/fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./assets/fonts/FuturaPT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {     
+  background-color: #F1F1F1;          
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 400;
+  position: relative;
+  color: #111111;
+}
+h2 {
+  font-weight: 500;
+}
+strong {
+  font-weight: 500;
+  display: block;
+}
+.hr {
+  width: 14rem;
+  border-top: 0.1rem solid #111111;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 0;
+}
+.list-item-number {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 0.5rem 0.1rem rgb(183, 183, 183);
+  -moz-box-shadow: 0px 0px 0.5rem 0.1rem rgb(183, 183, 183);
+  box-shadow: 0px 0px 0.5rem 0.1rem rgb(183, 183, 183);
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-item-text {
+  font-size: 1.3rem;
+}
+.section {
+  padding: 6.4rem 1.5rem;
+}
+.section-main-title {
+  background: linear-gradient(90.01deg, #111111 -8.85%, #B1B1B1 116.12%);
+  color: transparent;
+  background-clip: text;
+}
+.section-main-title-text {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.bottom-image {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  display: block;
+}
+.bottom-image-first {
+  padding-bottom: 2rem;
+}
+.bottom-image-second {
+  padding: 0;
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    background: url('../assets/vector-light-gray.svg') 0% 16.5% no-repeat,url('../assets/vector-light-gray-2.svg') 100% 15% no-repeat;
+    background-color: #F1F1F1;
+    background-size: 15vw;
+  }
+  html {
+    font-size: 10px;
+  }
+  .section-main-title-text {
+    font-size: 2.5vw;
+  }
+  .section {
+    padding: 9.6rem 1.5rem;
+  }
+  .hr {
+    width: 7vw;
+  }
+}

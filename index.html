@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kacper Bujak</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/stands-out.css">
+  <link rel="stylesheet" href="./styles/effects.css">
+  <link rel="stylesheet" href="./styles/struct.css">
+  <link rel="stylesheet" href="./styles/products.css">
+  <link href="./assets/font.ttf" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <img src="./assets/logo.svg" alt="logo" class="logo-image">
+    </div>
+    <button type="button" class="hamburger-button">
+      <img src="./assets/hamburger.svg" alt="przycisk do wysuwania menu" class="hamburger-button-image">
+    </button>
+    <nav class="desktop-nav-container">
+      <ul class="desktop-nav-list">
+        <li class="desktop-nav-item" id="desktop-nav-stands-out">CO NAS WYRÓŻNIA</li>
+        <li class="desktop-nav-item" id="desktop-nav-struct">SKŁAD</li>
+        <li class="desktop-nav-item" id="desktop-nav-products">PRODUKTY</li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hamburger-menu-outer">
+    <nav id="hamburger-menu-container">
+      <ul class="hamburger-menu">
+        <li class="hamburger-menu-item">DZIAŁANIE PREPARATU</li>
+        <li class="hamburger-menu-item">ZALECENIA</li>
+        <li class="hamburger-menu-item">SKŁAD</li>
+        <li class="hamburger-menu-item">DAWKOWANIE</li>
+        <li class="hamburger-menu-item">OPINIE</li>
+      </ul>
+    </nav>
+  </div>
+  <main class="main">
+    <div class="main-image-wrapper">
+      <img src="./assets/main-photo.png" alt="zdjęcie produktu" class="main-image">
+    </div>
+    <div class="main-section">
+      <div class="main-desktop-logo">
+        ARTHRO<span class="red">HARD</span>
+      </div>
+      <h2 class="main-title">
+        Lab-V Arthrohard Preparat
+        na wsparcie stawów dla psa i kota
+      </h2>
+      <p class="main-text">
+        Arthrohard to dobrze przyswajalny suplement diety
+        w formie syropu, stworzony z myślą o zdrowiu stawów Twojego psa lub kota.
+      </p>
+      <button class="buy-button">Kup teraz</button>
+    </div>
+  </main>
+  <section class="section" id="stands-out">
+    <div class="stands-out-title section-main-title">
+      <h2 class="section-main-title-text">
+        Co wyróżnia nasz preparat
+      </h2>
+      <hr class="hr">
+    </div>
+    <div class="stands-out-wrapper">
+      <div class="stands-out-item">
+        <div class="stands-out-title">
+          <h2 class="stands-out-title-text">
+            <div class="stands-out-title-text-first">
+              Innowacyjny dodatek -
+            </div>
+            <div class="stands-out-title-test-second">
+              Czarciego Pazura
+            </div>
+          </h2>
+          <hr class="hr">
+        </div>
+        <div class="stands-out-text">
+          Zapewnia dodatkowe wsparcie w zwalczaniu stanów bólowych i zapalnych. 
+          Skoncentrowane składniki aktywne, opracowane we współpracy z lekarzami weterynarii, 
+          przynoszą szybkie i zauważalne efekty, szczególnie korzystne dla zwierząt
+          z poważnymi problemami stawowymi.
+        </div>
+        <div class="stands-out-image-container">
+          <img src="./assets/flower.png" alt="kwiat" class="stands-out-image" loading="lazy">
+        </div>
+      </div>
+      <div class="stands-out-item">
+        <div class="stands-out-title">
+          <h2 class="stands-out-title-text">
+            <div class="stands-out-title-text-first">
+              Wygoda -
+            </div>
+            <div class="stands-out-title-test-second">
+              dwa sposoby podawania
+            </div>
+          </h2>
+          <hr class="hr">
+        </div>
+        <ul class="list" id="stands-out-list">
+          <li class="list-item">
+            <span class="list-item-number">1</span>
+            <span class="list-item-text">Bezpośrednio do pyszczka</span>
+          </li>
+          <li class="list-item">
+            <span class="list-item-number">2</span>
+            <span class="list-item-text">Zmieszany z karmą</span>
+          </li>
+        </ul>
+        <div class="stands-out-image-container" id="double-image-container">
+          <img src="./assets/double-photo-first.png" alt="szczeniak" class="stands-out-image" loading="lazy">
+          <img src="./assets/double-photo-second.png" alt="dorosły pies" class="stands-out-image" loading="lazy">
+        </div>
+      </div>
+      <div class="stands-out-item">
+        <div class="stands-out-title">
+          <h2 class="stands-out-title-text">
+            <div class="stands-out-title-text-first">
+              Skuteczność -
+            </div>
+            <div class="stands-out-title-test-second">
+              skoncentrowana dawka
+            </div>
+          </h2>
+          <hr class="hr">
+        </div>
+        <div class="stands-out-text">
+          <strong>Tylko jedna porcja dziennie.</strong>
+          To nie tylko wygoda, ale również gwarancja,
+          że Twoje zwierzę otrzymuje wszystko, czego potrzebuje, 
+          aby cieszyć się zdrowiem i aktywnością na długo. 
+          Skorzystaj z zalet Arthrohard i zobacz różnicę w komforcie życia swojego zwierzęcia.    
+        </div>
+        <div class="stands-out-image-container">
+          <img src="./assets/syringe.png" alt="strzykawka" class="stands-out-image" loading="lazy">
+        </div>
+      </div>
+  </section>
+  <section class="section" id="effects">
+    <div class="section-main-title">
+      <h2 class="section-main-title-text">
+        Działanie preparatu
+      </h2>
+      <hr class="hr">
+    </div>
+    <ul class="list" id="effects-list">
+      <li class="effects-list-item">
+        <span class="list-item-number">1</span>
+        <span class="list-item-text">Wsparcie rozwoju chrząstki stawowej</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">2</span>
+        <span class="list-item-text">Działanie chondroprotekcyjne</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">3</span>
+        <span class="list-item-text">Zmniejszenie stanu zapalnego i bólu</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">4</span>
+        <span class="list-item-text">Wzmocnienie stawów</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">5</span>
+        <span class="list-item-text">Ochrona przed mikrourazami</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">6</span>
+        <span class="list-item-text">Regeneracja po urazach
+          i zabiegach ortopedycznych</span>
+      </li>
+      <li class="effects-list-item">
+        <span class="list-item-number">7</span>
+        <span class="list-item-text">Poprawa jakości życia</span>
+      </li>
+    </ul>
+  </section>
+  <section class="section" id="struct">
+    <div class="section-main-title" id="struct-main-title">
+      <h2 class="section-main-title-text">
+        Skład w 5 ml
+      </h2>
+      <hr class="hr">
+    </div>
+    <div class="struct-secondary-title">
+      <h2 class="struct-secondary-title-text" >
+        Co dają poszczególne składniki:
+      </h2>
+      <hr class="hr" id="struct-secondary-title-hr">
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/biotech.svg" alt="Siarczan glukozaminy ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Siarczan glukozaminy</h3>
+      <p class="struct-list-item-amt">650 mg</p>
+      <p class="struct-list-item-text">
+        Glukozamina jest naturalnym składnikiem chrząstki. 
+        Dodatek glukozaminy przyczynia się do zwiększenia produkcji glikozaminoglikanów 
+        (m.in. siarczanu keratanu, heparanu, kwasu hialuronowego), 
+        które pomagają w odbudowie chrząstki, co jest szczególnie korzystne dla zwierząt 
+        ze zmianami zwyrodnieniowymi stawów.
+      </p>
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/grass.svg" alt="Czarci pazur ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Czarci pazur</h3>
+      <p class="struct-list-item-amt">250 mg</p>
+      <p class="struct-list-item-text">
+        Czarci pazur jest rośliną, która ma właściwości przeciwzapalne i przeciwbólowe. 
+        Może to pomóc zwierzętom, które doświadczają bólu i stanu zapalnego związanego z problemami ze stawami.
+      </p>
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/biotech.svg" alt="Siarczan chondroityny ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Siarczan chondroityny</h3>
+      <p class="struct-list-item-amt">300 mg</p>
+      <p class="struct-list-item-text">
+        Chondroityna, podobnie jak glukozamina, 
+        jest składnikiem chrząstki. Chondroityna pomaga zwalczać enzymy, 
+        które niszczą chrząstkę, a także pomaga chrząstce zatrzymać wodę, 
+        co jest ważne dla jej sprężystości i absorpcji wstrząsów.
+      </p>
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/C++.svg" alt="Witamina C ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Witamina C</h3>
+      <p class="struct-list-item-amt">50 mg</p>
+      <p class="struct-list-item-text">
+        Witamina C jest potężnym przeciwutleniaczem, 
+        który może pomóc w ochronie stawów poprzez neutralizację wolnych rodników, 
+        które mogą uszkadzać chrząstkę. Ponadto, witamina C odgrywa ważną rolę w produkcji kolagenu, 
+        kluczowego składnika chrząstki.
+      </p>
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/science.svg" alt="Kwas hialuronowy ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Kwas hialuronowy</h3>
+      <p class="struct-list-item-amt">50 mg</p>
+      <p class="struct-list-item-text">
+        Kwas hialuronowy jest kluczowym składnikiem płynu stawowego, 
+        który działa jak smar i amortyzator dla stawów. 
+        Suplementacja kwasem hialuronowym może pomóc w utrzymaniu prawidłowej objętości 
+        i konsystencji płynu stawowego.
+      </p>
+    </div>
+    <div class="struct-list-item">
+      <img src="./assets/struct_icons/msm.svg" alt="MSM ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">MSM</h3>
+      <p class="struct-list-item-amt">250 mg</p>
+      <p class="struct-list-item-text">
+        Metylosulfonylometan, czyli MSM, to naturalny związek siarki, 
+        który pomaga w utrzymaniu zdrowych stawów poprzez zmniejszenie stanu zapalnego i bólu.
+        MSM może również pomagać w produkcji kolagenu,
+        co przyczynia się do zdrowia chrząstki stawowej.
+      </p>
+    </div>
+    <div class="struct-list-item" id="struct-list-last-item">
+      <img src="./assets/struct_icons/drop.svg" alt="Syrop glukozowo - fruktozowy ikona" class="struct-list-item-icon">
+      <h3 class="struct-list-item-name">Syrop glukozowo - fruktozowy</h3>
+      <p class="struct-list-item-amt">250 mg</p>
+    </div>
+    <img src="./assets/struct-bottom-first.png" alt="produkt" class="bottom-image bottom-image-first" loading="lazy">
+    <div class="bottom-image-first-container">
+      <img src="./assets/bottle.svg" alt="produkt" class="bottom-image bottom-image-first-desktop" loading="lazy">
+      <div class="buy-button-red-wrapper">
+        <button class="buy-button buy-button-red">Kup teraz</button>
+      </div>
+    </div>
+    <img src="./assets/struct-bottom-second.png" alt="piesek"class="bottom-image bottom-image-second"  loading="lazy">
+    <div class="bottom-image-second-container">
+      <img src="./assets/piesek.png" alt="produkt" class="bottom-image bottom-image-second-desktop" loading="lazy">
+    </div>
+  </section>
+  <div class="products">
+    <div class="products-quantity">
+      <div class="products-quantity-text">liczba produktów na stronie</div>
+      <select name="" id="" class="products-quantity-select">
+        <option value="10" class="option" selected>10</option>
+        <option value="20" class="option">20</option>
+        <option value="30" class="option">30</option>
+      </select>
+    </div>
+    <ul class="products-list">
+    </ul>
+  </div>
+  <div class="popup-outer">
+    <div class="popup-inner">
+      <div class="popup-header">
+        <div class="popup-id"></div>
+        <div class="popup-close">x</div>
+      </div>
+      <div class="popup-name"></div>
+      <div class="popup-text"></div>
+    </div>
+  </div>
+</body>
+</html>

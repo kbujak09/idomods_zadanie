@@ -1,0 +1,117 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.logo-image {
+  height: 1.2rem;
+}
+.hamburger-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  z-index: 1000;
+  border-radius: 50%;
+}
+.hamburger-button:focus {
+  outline: 0;
+  border-radius: 50%;
+}
+.hamburger-button:active {
+  outline: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 1.6rem 0.4rem gray;
+  -moz-box-shadow: 0px 0px 1.6rem 0.4rem gray;
+  box-shadow: 0px 0px 1.6rem 0.4rem gray;
+}
+.hamburger-menu {
+  list-style: none;
+  background: #AD4844;
+  text-align: center;
+  padding: 2.4rem;
+  margin: 0;
+}
+.hamburger-menu-item {
+  color: #D8D8D8;
+  font-size: 1.3rem;
+  margin-bottom: 1.6rem;
+}
+.hamburger-menu-item:hover {
+  text-decoration: 1px solid #ececec underline;
+  color: #ececec;
+  text-underline-offset: 0.3rem;
+}
+.hamburger-menu-outer {
+  box-sizing: border-box;
+  background-color: #ffffffca;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  padding: 4.4rem 1.5rem;
+  z-index: 5;
+  display: none;
+}
+.desktop-nav-container {
+  display: none;
+}
+@media (min-width: 900px) {
+  .desktop-nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    padding: 0;
+    margin: 0;
+    justify-self: flex-start;
+  }
+  .desktop-nav-item {
+    font-size: 0.85vw;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #desktop-nav-products {
+    font-weight: 700;
+  }
+  .desktop-nav-container {
+    display: block;
+  }
+  .hamburger-button {
+    display: none;
+  }
+  #header {
+    display: grid;
+    gap: 3.2vw;
+    grid-template-columns: 2fr 3fr;
+    padding: 2.4vw 0;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 9px 0px rgb(150, 150, 150);
+    -moz-box-shadow: 0px 0px 9px 0px rgb(150, 150, 150);
+    box-shadow: 0px 0px 9px 0px rgb(150, 150, 150);
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease;
+  }
+  #header.hidden {
+    transform: translateY(-100%);
+  }
+  .logo-image {
+    height: 1.5vw;
+  }
+  .logo {
+    justify-self: center;
+  }
+  #header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .active {
+    text-decoration: 1px solid black underline;
+    text-underline-offset: 0.5rem;
+  }
+}

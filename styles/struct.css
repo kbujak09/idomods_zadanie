@@ -1,0 +1,139 @@
+#struct {
+  background: url('../assets/vector-light-gray.svg') 2% 0.2% no-repeat,
+              url('../assets/vector-light-gray-2.svg') 100% 1% no-repeat,
+              url('../assets/vector-light-gray.svg') 2% 20% no-repeat,
+              url('../assets/vector-light-gray-2.svg') 100% 21% no-repeat,
+              url('../assets/vector-light-gray.svg') 2% 39% no-repeat,
+              url('../assets/vector-light-gray-2.svg') 100% 40% no-repeat,
+              url('../assets/vector-light-gray.svg') 2% 60% no-repeat,
+              url('../assets/vector-light-gray-2.svg') 100% 61% no-repeat;
+  background-color: #FFFFFF;
+  background-size: 20vw;
+  padding-top: 4.8rem;
+  padding-bottom: 0;
+  padding: 4.8rem 0 0 0;
+}
+.struct-secondary-title {
+  margin: 6.4rem 0;
+}
+.struct-secondary-title-text {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+}
+.struct-list-item {
+  text-align: center;
+  margin: 4.8rem 1.5rem;
+}
+.struct-list-item-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.struct-list-item-name {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.struct-list-item-amt {
+  font-size: 1.3rem;
+  margin: 1.6rem 0;
+}
+.struct-list-item-text {
+  margin: 0;
+  font-size: 1.3rem;
+}
+#struct-list-last-item {
+  padding-bottom: 3.2rem;
+}
+.bottom-image-first-container, .bottom-image-second-container {
+  display: none;
+}
+.buy-button-red-wrapper {
+  display: none;
+}
+@media (min-width: 900px) {
+  #struct-list-last-item {
+    display: none;
+  }
+  #struct-secondary-title-hr {
+    display: none;
+  }
+  .struct-secondary-title {
+    margin: 5vw 0;
+    grid-column: 1 / 4;
+  }
+  .struct-secondary-title-text {
+    font-size: 1.5vw;
+  }
+  #struct {
+    background: none;
+    background-color: #FFFFFF;
+    padding-top: 2vw;
+    display: grid;
+    grid-template-rows: repeat(6, min-content);
+    grid-template-columns: 3fr 4fr 3fr;
+    padding: 0 9vw;
+  }
+  #struct-main-title {
+    grid-column: 1 / 4;
+  }
+  .struct-list-item-name:hover {
+    cursor: pointer;
+    text-decoration: underline 1px solid black;
+    text-underline-offset: 1vw;
+  }
+  .bottom-image-first {
+    padding: 0;
+    display: none;
+  }
+  .bottom-image-first-container, .bottom-image-second-container {
+    display: block;
+  }
+  .bottom-image-first-container {
+    grid-row: 3 / 6;
+    grid-column: 2 / 3;
+    position: relative;
+  }
+  .bottom-image-first-desktop {
+    background: url('../assets/vector-green.svg') 95% 45% no-repeat, url('../assets/vector-green.svg') 2% 55% no-repeat; 
+    background-size: 11vw;
+    padding: 0;
+  }
+  .bottom-image-second-desktop {
+    padding: 0;
+    background: url('../assets/vector-green.svg') 73% 70% no-repeat, url('../assets/vector-green.svg') 30% 70% no-repeat; 
+    background-size: 11vw;
+    padding: 5vw 15vw 0 15vw;
+  }
+  .bottom-image-second-container {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+  }
+  .bottom-image-second {
+    grid-column: 2 / 3;
+    position: absolute;
+    display: none;
+  }
+  .struct-list-item {
+    margin: 0;
+  }
+  .struct-list-item-name {
+    font-size: 1.7vw;
+  }
+  .struct-list-item-text, .struct-list-item-amt {
+    font-size: 1.05vw;
+  }
+  .buy-button-red-wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 89%;
+    width: 100%;
+  }
+  .buy-button-red {
+    background-color: #AD4844;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

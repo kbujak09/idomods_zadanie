@@ -1,0 +1,84 @@
+.main {
+  padding: 5.8rem 1.5rem 7.4rem 1.5rem;
+  background: url('../assets/vector-light-gray.svg') 0% 100% no-repeat;
+  background-size: 20vw;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.main-image {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+.main-title, .main-text {
+  margin: 0;
+  text-align: center;
+}
+.main-title {
+  background: linear-gradient(90.01deg, #111111 -8.85%, #B1B1B1 116.12%);;
+  color: transparent;
+  background-clip: text;
+  font-size: 2rem;
+}
+.main-text {
+  font-size: 1.3rem;
+}
+.main-desktop-logo {
+  display: none;
+}
+.buy-button {
+  display: none;
+}
+@media (min-width: 900px) {
+  .main {
+    background-image: none;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 6fr 7fr;
+    justify-content: center;
+    padding: 2vw 8vw;
+    gap: 5.5vw;
+  }
+  .main-section {
+    gap: 0;
+    margin-top: 8vw;
+  }
+  .main-section > * {
+    text-align: left;
+  }
+  .main-title {
+    font-size: 2.4vw;
+    margin: 2vw 5vw 1vw 0;
+  }
+  .main-text {
+    font-size: 1vw;
+    margin-right: 14vw;
+  }
+  .main-desktop-logo {
+    display: block;
+    font-size: 6vw;
+    font-weight: 500;
+  }
+  .red {
+    color: #AD4844;
+  }
+  .main-image {
+    margin: 0;
+    width: 100%;
+  }
+  .buy-button {
+    display: block;
+    cursor: pointer;
+    border: 0;
+    background-color: #30AB4C;
+    color: #FFFFFF;
+    padding: 0.6vw 2.2vw;
+    margin: 1vw 0;
+    font-weight: 700;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1vw;
+    align-self: baseline;
+  }
+}

@@ -1,0 +1,23 @@
+#effects {
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+  background: url('../assets/vector-light-gray-2.svg') 100% 9% no-repeat,
+              url('../assets/vector-light-gray.svg') 2% 5% no-repeat;
+  background-size: 20vw;
+  background-color: #FFFFFF;
+}
+.effects-list-item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 2.8rem;
+}
+#effects-list {
+  padding: 4.8rem 0 2rem 0;
+  gap: 2.8rem;
+}
+@media (min-width: 900px) {
+  #effects {
+    display: none;
+  }
+}

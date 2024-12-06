@@ -1,0 +1,129 @@
+.products {
+  padding: 12.8rem 2.4rem;
+}
+.products-quantity {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 2.4rem;
+}
+.products-quantity-text {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.8rem;
+  border: 0.1rem solid #AD4844;
+}
+.products-quantity-select {
+  border: 0.1rem solid #AD4844;
+  appearance: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 700;  
+  text-align: center;
+  text-align-last: center;
+  border-radius: 0;
+  background: url('../assets/arrow.svg');
+  background-color: #AD4844;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 2.4rem) 50%;
+  margin: 0;
+  padding: 1rem 0;
+}
+.products-quantity-select:focus {
+  outline: 0;
+}
+.option {
+  font-size: 2rem;
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 700;
+}
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10.5rem);
+  justify-content: space-between;
+  gap: 2rem;
+}
+.product-container {
+  width: 10.5rem;
+  height: 10.5rem;
+  background-color: #BEBEBE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-data {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.popup-outer {
+  display: none;
+}
+@media (min-width: 900px) {
+  .products-quantity {
+    display: flex;
+    justify-content: center;
+  }
+  .products-quantity-select {
+    padding: 0 4vw 0 3vw;
+    cursor: pointer;
+  }
+  .option {
+    cursor: pointer;
+  }
+  .products-list {
+    padding: 8vw 9vw;
+    gap: 2vw;
+    grid-template-columns: repeat(auto-fill, 18vw);
+  }
+  .product-container {
+    width: 18vw;
+    height: 18vw;
+    cursor: pointer;
+  }
+  .popup-outer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .show-popup {
+    display: flex;
+    z-index: 1000;
+  }
+  .popup-inner {
+    background-color: #FFFFFF;
+    padding: 0.6vw 0.8vw;
+    width: 36vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 1.4vw;
+    font-weight: 500;
+    position: relative;
+  }
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4vw;
+    font-weight: 500;
+    padding-bottom: 4vw;
+  }
+  .popup-text, .popup-name {
+    padding-bottom: 2vw;
+  }
+  .popup-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0.8vw;
+  }
+}
