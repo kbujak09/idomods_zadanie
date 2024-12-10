@@ -1,5 +1,6 @@
 const hamburgerMenuButton = document.querySelector('.hamburger-button');
 const hamburgerMenu = document.querySelector('.hamburger-menu-outer');
+const hamburgerMenuInner = document.querySelector('.hamburger-menu');
 const select = document.querySelector('.products-quantity-select');
 
 let products = [];
@@ -8,6 +9,7 @@ let isDesktop = window.innerWidth > 900;
 
 let pageSize = select.value;
 let rowSize = getRowSize();
+let pageCount = 1;
 
 const standsOut = document.getElementById('desktop-nav-stands-out');
 const struct = document.getElementById('desktop-nav-struct');
@@ -17,13 +19,15 @@ const standsOutSection = document.getElementById('stands-out');
 const structSection = document.getElementById('struct');
 const productsSection = document.querySelector('.products')   
 
-const popup = document.querySelector('.popup-outer');
+const popupOuter = document.querySelector('.popup-outer');
+const popupInner = document.querySelector('.popup-inner');
 const popupClose = document.querySelector('.popup-close');
 const popupId = document.querySelector('.popup-id');
 const popupName = document.querySelector('.popup-name');
 const popupText = document.querySelector('.popup-text');
 
 let headerHeight = document.getElementById('header').offsetHeight;
+let isFetchingData = false;
 
 function toggleMenu() {
   if (hamburgerMenu.style.display === 'block') {
@@ -36,9 +40,10 @@ function toggleMenu() {
   }
 };
 
-async function fetchData(size) {
+async function fetchData(size, page) {
+  isFetchingData = true;
   try {
-    const res = await fetch(`https://brandstestowy.smallhost.pl/api/random?pageNumber=1&pageSize=${size}`);
+    const res = await fetch(`https://brandstestowy.smallhost.pl/api/random?pageNumber=${page}&pageSize=${size}`);
 
     if (!res.ok) {
       console.error('Błąd przy pobieraniu danych!');
@@ -47,20 +52,21 @@ async function fetchData(size) {
 
     const data = await res.json();
 
-    console.log(data);
-
     return data;
   }
   catch (err) {
     console.error(err);
     return {};
   }
+  finally {
+    isFetchingData = false;
+  }
 };
 
 async function renderInitData(pageSize, rowSize) {
   productsToRender = [];
 
-  products = await fetchData(pageSize);
+  products = await fetchData(pageSize, pageCount++);
 
   if (products && products.data) {
     productsToRender.push(...products.data.slice(0, rowSize));
@@ -69,16 +75,19 @@ async function renderInitData(pageSize, rowSize) {
 }
 
 function addProducts (rowSize) {
-  if (productsToRender.length >= pageSize) return;
+  if (!products.data) return;
+  if (productsToRender.length >= products.data.length && !isFetchingData) {
+    fetchNewProducts();
+  };
   const productsToAdd = products.data.slice(productsToRender.length, (productsToRender.length + rowSize));
   productsToRender.push(...productsToAdd);
   renderProducts(productsToRender);
 }
 
 async function fetchNewProducts() {
-  const newProducts = await fetchData(pageSize);
+  const newProducts = await fetchData(pageSize, pageCount++);
   if (newProducts && newProducts.data) {
-    products.push(...newProducts.data); // Add the newly fetched products to the global products array
+    products.data.push(...newProducts.data);
   }
 }
 
@@ -98,12 +107,10 @@ function renderProducts() {
     productList.appendChild(productContainer);
 
     productContainer.addEventListener('click', () => {
-      if (isDesktop) {
-        popup.classList.add('show-popup');
-        popupId.innerText = product.id;
-        popupName.innerText = `Nazwa: ${product.text.split(' ')[0]}`
-        popupText.innerText = `Wartość: ${product.text.split(' ')[1]}`
-      }
+    popupOuter.classList.add('show-popup');
+    popupId.innerText = product.id;
+    popupName.innerText = `Nazwa: ${product.text.split(' ')[0]}`;
+    popupText.innerText = `Wartość: ${product.text.split(' ')[1]}`;
     });
   });
 };
@@ -148,7 +155,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     }
   });
 }, {
-  threshold: 0.4
+  threshold: window.innerWidth > 1920 ? 0.32 : 0.4
 });
 
 observer.observe(standsOutSection);
@@ -168,6 +175,8 @@ productsNav.addEventListener('click', () => {
 });
 
 hamburgerMenuButton.addEventListener('click', toggleMenu);
+hamburgerMenu.addEventListener('click', toggleMenu);
+hamburgerMenuInner.addEventListener('click', (e) => e.stopPropagation());
 
 window.addEventListener('resize', () => {
   headerHeight = document.getElementById('header').offsetHeight
@@ -178,6 +187,7 @@ window.addEventListener('resize', () => {
 
 select.addEventListener('change', () => {
   pageSize = select.value;
+  pageCount = 2;
 
   if (pageSize < productsToRender.length) {
     productsToRender = productsToRender.slice(0, pageSize);
@@ -197,13 +207,23 @@ select.addEventListener('change', () => {
 
 window.addEventListener('scroll', () => {
   if (isNearBottom()) {
-    addProducts(rowSize);
+    if (!products.data && !isFetchingData) {
+      renderInitData(pageSize, rowSize);
+    } else {
+      addProducts(rowSize);
+    }
   }
 });
 
 popupClose.addEventListener('click', () => {
-  popup.classList.remove('show-popup');
-})
+  popupOuter.classList.remove('show-popup');
+});
 
-renderInitData(pageSize, rowSize);
+popupOuter.addEventListener('click', () => {
+  popupOuter.classList.remove('show-popup');
+});
+
+popupInner.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
 

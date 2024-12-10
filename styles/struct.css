@@ -51,6 +51,11 @@
 .buy-button-red-wrapper {
   display: none;
 }
+.bottom-image-second {
+  background:url('../assets/vector-green.svg') 110% 250% no-repeat, url('../assets/vector-green.svg') 0% 450% no-repeat; 
+  background-size: 10rem;
+  padding: 4rem 0 0 0;
+}
 @media (min-width: 900px) {
   #struct-list-last-item {
     display: none;
@@ -101,9 +106,10 @@
   }
   .bottom-image-second-desktop {
     padding: 0;
-    background: url('../assets/vector-green.svg') 73% 70% no-repeat, url('../assets/vector-green.svg') 30% 70% no-repeat; 
+    background:url('../assets/vector-green.svg') 73% 70% no-repeat, url('../assets/vector-green.svg') 30% 70% no-repeat; 
     background-size: 11vw;
     padding: 5vw 15vw 0 15vw;
+    background-attachment: fixed;
   }
   .bottom-image-second-container {
     grid-column: 1 / 4;
